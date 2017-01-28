@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Welcome to my page</title>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <link rel="stylesheet" href="css/bootstrap-social.scss">
+    <link rel="stylesheet" href="css/bootstrap-social.less">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="less/font-awesome.less">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="icon" href="img/logo2.jpg">
+    <script>
+        $(document).ready(function () {
+            $('#slider').carousel({
+                interval: 5000
+            });
+
+            $(".sliderN").each(function(){
+                var pos = $(this).offset().top;
+
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + 400 ) {
+                    $(this).addClass("slider");
+                }
+                else
+                    $(this).removeClass("slider");
+            });
+
+        });
+
+        $(window).scroll(function() {
+            $(".sliderN").each(function(){
+                var pos = $(this).offset().top;
+
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + 500 ) {
+                    $(this).addClass("slider");
+                }
+                else
+                    $(this).removeClass("slider");
+            });
+
+            $(".imgSLift").each(function(){
+                var pos = $(this).offset().top;
+
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + 800 ) {
+                    $(this).addClass("imgLeft");
+                }
+                else
+                    $(this).removeClass("imgLeft");
+            });
+
+            $(".imgSRight").each(function(){
+                var pos = $(this).offset().top;
+
+                var winTop = $(window).scrollTop();
+                if (pos < winTop + 800 ) {
+                    $(this).addClass("imgRight");
+                }
+                else
+                    $(this).removeClass("imgRight");
+            });
+        });
+
+
+    </script>
+
+
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<div class="navbar navbar-default navbar-fixed-top">
+
+    <!-- icon -->
+    <div class="container">
+    <div class="navbar-brand">
+        <img src="img/logo2.jpg" >
+    </div>
+
+    <!-- items -->
+    <nav class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+           <li class="active"><a href="#home"> <span class="glyphicon glyphicon-home"></span> Home</a> </li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#works">GELARY <span class="label label-info">SOON</span> </a> </li>
+            <li><a href="#about">About us</a></li>
+            <!-- drop down list -->
+            <li class="dropdown">
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+                    <span class="glyphicon glyphicon-search" ></span>
+                    Find me
+                    <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu" role="menu" >
+                    <li><a href="#"><span class="label btn-facebook"><i class="fa fa-facebook"> </i></span> FACEBOOK</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" ><span class=" label label-danger"><i class="fa fa-google"></i></span> GOOGLE+</a> </li>
+                    <li class="divider"></li>
+                    <li><a href="#" ><span class="label btn-twitter"><i class="fa fa-twitter"></i></span> TWITTER</a> </li>
+
+                </ul>
+
+            </li>
+         </ul>
+    </nav>
+    </div>
+
+</div>
+
+
+<!-- body div-->
+<div style="padding-top: 0;">
+
+    <!-- HOME -->
+    <div id="home">
+<!-- img slider -->
+    <div id="slider" class="carousel fade sliderN">
+        <div class="dark-bord"></div>
+
+        <div class="carousel-inner" role="listbox">
+
+            <!-- img1 -->
+            <div class="item active food">
+                <img src="img/city.jpg" class="img-responsive" alt="img1">
+            </div>
+
+            <!-- img 2 -->
+            <div class="item food">
+                <img src="img/Empire.JPG" class="img-responsive" alt="img1">
+            </div>
+            <!-- img 3 -->
+            <div class="item food">
+                <img src="img/Sunset.jpg" class="img-responsive" alt="img1">
+            </div>
+
+            <!-- intro -->
+            <div class="container" style="z-index: 10;" >
+                <div class="row">
+                    <div class="slide-text slide_style_center" style="width: 100%; padding-bottom: 20px;">
+                        <h1>SUNSET PROJECT</h1>
+                        <p class="intro-shadow" style="font-size: large;">WELCOME IN OUR PAGE</p>
+                        <a class="btn btn-default btn-lg">Visit</a>
+                        <a class="btn btn-lg btn-danger">Works</a>
+                    </div>
+                </div>
+                <div class="btn-group btn-group-justified" style="box-shadow:0 0 10px #380000">
+                <div class="col-lg-4 col-md-4 col-sm-4 btn btn-block ">
+                    <i class="fa fa-google"></i>
+                    GOOGLE
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 btn btn-block">
+                    <i class="fa fa-facebook"></i>
+                    FACEBOOK
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 btn btn-block ">
+                    <i class="fa fa-twitter"></i>
+                    TWITTER
+                </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+    <!-- products -->
+    <div style=" padding-top: 10px; background-color: rgba(15, 15, 15, 0.8)">
+    <div class="container text-center sliderN" style="padding: 50px;" id="products">
+        <br/>
+
+            <span class="group orange">
+                <div class="item line"></div>
+                <div class="item  top"></div>
+                <span class="text-center item text">OUR PRODUCTS</span>
+                <div class="item line"></div>
+            </span>
+
+
+        <!-- WEB DESIGN -->
+        <a href="#">
+        <div class="col col-md-4 col-sm-4 col-lg-4 text-center box red">
+            <div class="img-round red">
+                <img style="margin: 20px;" src="img/pc.svg" width="100">
+            </div>
+            <h3>Web Design</h3>
+            <span style="border-top: 2px solid purple; width: 50px;"></span>
+            <p>
+                Create your own beatufil website  and let all pepole how is you are ! . nice design and competitive price.
+            </p>
+        </div>
+        </a>
+        <!-- ANDROID DEVELOPER -->
+        <a href="#">
+        <div class="col col-md-4 col-sm-4 col-lg-4 text-center box green">
+            <div class="img-round green">
+                <img style="margin: 20px;" src="img/phone.svg" width="100" >
+            </div>
+            <h3>ANDROID DEVELOPER</h3>
+            <p>
+                Create your own beautiful APP  and let all pepole how is you are ! . nice design and competitive price.
+            </p>
+        </div>
+        </a>
+        <!-- DESKTOP APPLICATIONS DEVELOPER -->
+        <a href="#">
+            <div class="col col-md-4 col-sm-4 col-lg-4 text-center box blue">
+            <div class="img-round blue">
+                <img style="margin: 20px;" src="img/desktop-mac.svg" width="100" >
+            </div>
+            <h3>DESKTOP APPLICATIONS DEVELOPER</h3>
+            <p>
+                Create your own beautiful APP  and let all pepole how is you are ! . nice design and competitive price.
+            </p>
+        </div>
+        </a>
+    </div>
+    </div>
+
+    <!-- features -->
+    <div id="features" style="width: 100%; background-color: rgba(255, 255, 255, 0.9);">
+    <div  class="container sliderN">
+        <br/>
+
+    <div class="group red">
+        <div class="item line"></div>
+        <div class="text-center item text">FEATURES</div>
+        <div class="item line"></div>
+    </div>
+
+
+        <br/>
+        <div class="panel-body">
+
+            <div class="col col-lg-4 col-md-4 col-sm-4">
+                <div class=" panel red">
+                    <div class="panel-heading"><h3>
+                        <i class="fa fa-star"></i>. Nice and simple design</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ol>
+                            <li>features 1</li>
+                            <li>features 2</li>
+                            <li>features 3</li>
+                            <li>features 4</li>
+                            <li>features 5</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col col-lg-4 col-md-4 col-sm-4">
+                <div class="panel green">
+                    <div class="panel-heading"><h3>
+                        <i class="fa fa-address-card"></i>. Fast work </h3>
+                    </div>
+                    <div class="panel-body">
+                        <ol>
+                            <li>Work 1</li>
+                            <li>Work 2</li>
+                            <li>Work 3</li>
+                            <li>Work 4</li>
+                            <li>Work 5</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-lg-4 col-md-4 col-sm-4">
+                <div class="panel blue">
+                    <div class="panel-heading"><h3>
+                        <i class="fa fa-bank"></i>. competitive price </h3>
+                    </div>
+                    <div class="panel-body">
+                        <ol>
+                            <li>Work 1</li>
+                            <li>Work 2</li>
+                            <li>Work 3</li>
+                            <li>Work 4</li>
+                            <li>Work 5</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col col-lg-4 col-md-4 col-sm-4">
+                <div class=" panel move">
+                    <div class="panel-heading"><h3>
+                        <i class="fa fa-android"></i>. ANDROID</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ol>
+                            <li>ANDROID 1</li>
+                            <li>ANDROID 2</li>
+                            <li>ANDROID 3</li>
+                            <li>ANDROID 4</li>
+                            <li>ANDROID 5</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col col-lg-4 col-md-4 col-sm-4">
+                <div class=" panel brown">
+                    <div class="panel-heading"><h3>
+                        <i class="fa fa-ambulance"></i>. HOSPITAL</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ol>
+                            <li>HOSPITAL 1</li>
+                            <li>HOSPITAL 2</li>
+                            <li>HOSPITAL 3</li>
+                            <li>HOSPITAL 4</li>
+                            <li>HOSPITAL 5</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-lg-4 col-md-4 col-sm-4">
+                <div class=" panel yellow">
+                    <div class="panel-heading"><h3>
+                        <i class="fa fa-beer"></i>. YELLOW</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ol>
+                            <li>YELLOW 1</li>
+                            <li>YELLOW 2</li>
+                            <li>YELLOW 3</li>
+                            <li>YELLOW 4</li>
+                            <li>YELLOW 5</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    </div>
+    </div>
+
+    <!-- Gelary -->
+    <div class="container  text-center" style="width:100%;background-color: rgba(255, 255, 255, 1);" id="works">
+        <br/>
+        <div class="sliderN">
+        <span class="group orange">
+            <div class="item line"></div>
+            <span class="text-center item text">GELLARY</span>
+            <div class="item line"></div>
+        </span>
+        </div>
+        <br/>
+
+        <!-- row 1 -->
+        <div class="row">
+            <!-- image 1 -->
+            <div class="col col-lg-3 col-md-3 col-sm-3 text-center imgSLift">
+                <img src="img/im/6.jpg" class="panel panel-info gelery">
+                <div class="fadeblack">
+                    <h3><b>Sunset</b></h3>
+                    <div class="subline"></div>
+                    <div class="btn">Sunset project</div>
+                </div>
+            </div>
+            <!-- image 2 -->
+            <div class="col col-lg-3 col-md-3 col-sm-3 text-center imgSLift">
+                <img src="img/im/7.jpg" class="panel panel-info gelery">
+                <div class="fadeblack">
+                    <h3><b>watching</b></h3>
+                    <div class="subline"></div>
+                    <div class="btn">watching project</div>
+                </div>
+            </div>
+            <!-- image 3 -->
+            <div class="col col-lg-3 col-md-3 col-sm-3 text-center imgSLift">
+                <img src="img/im/8.jpg" class="panel panel-info gelery">
+                <div class="fadeblack">
+                    <h3><b>Empire</b></h3>
+                    <div class="subline"></div>
+                    <div class="btn">Empire project</div>
+                </div>
+            </div>
+            <!-- image 4 -->
+            <div class="col col-lg-3 col-md-3 col-sm-3 text-center imgSLift">
+                <img src="img/im/9.jpg" class="panel panel-info gelery">
+                <div class="fadeblack">
+                    <h3><b>city</b></h3>
+                    <div class="subline"></div>
+                    <div class="btn">city project</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- row 2 -->
+        <div class="row">
+            <!-- image 1 -->
+            <div class="col col-lg-3 col-md-3 col-sm-3 text-center imgSRight">
+                <img src="img/im/10.jpg" class="panel panel-info gelery">
+                <div class="fadeblack">
+                    <h3><b>Image 1</b></h3>
+                    <div class="subline"></div>
+                    <div class="btn">Test project</div>
+                </div>
+            </div>
+            <!-- image 2 -->
+            <div class="col col-lg-3 col-md-3 col-sm-3 text-center imgSRight">
+                <img src="img/im/11.jpg" class="panel panel-info gelery">
+                <div class="fadeblack">
+                    <h3><b>Image 1</b></h3>
+                    <div class="subline"></div>
+                    <div class="btn">Test project</div>
+                </div>
+            </div>
+            <!-- image 3 -->
+            <div class="col col-lg-3 col-md-3 col-sm-3 text-center imgSRight">
+                <img src="img/im/12.jpg" class="panel panel-info gelery">
+                <div class="fadeblack">
+                    <h3><b>Image 1</b></h3>
+                    <div class="subline"></div>
+                    <div class="btn">Test project</div>
+                </div>
+            </div>
+            <!-- image 4 -->
+            <div class="col col-lg-3 col-md-3 col-sm-3 text-center imgSRight">
+                <img src="img/im/13.jpg" class="panel panel-info gelery">
+                <div class="fadeblack">
+                    <h3><b>Image 1</b></h3>
+                    <div class="subline"></div>
+                    <div class="btn">Test project</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ABOUT US -->
+    <br/>
+    <div class="container text-center sliderN" id="about">
+        <br/>
+
+        <span class="group move">
+            <div class="item line"></div>
+            <span class="text-center item text">ABOUT US</span>
+            <div class="item line"></div>
+        </span>
+        <br/>
+
+        <div class="col col-lg-12 col-sm-12 col-md-12 jumbotron" style="padding: 5%;">
+            <img src="img/logo2.jpg" width="300" height="150">
+            <br/>
+
+            <h2>What about us?</h2>
+            <h4 style="color: #0a568c;">We are a simple company that gift some  projects for people.</h4>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!-- FOOTER -->
+<div  style="background-color: rgba(43, 43, 43, 1); width: 100%; margin-bottom: 2.5%;">
+    <div class="container text-center">
+
+        <div class="col">
+        <div class="col col-lg-8 col-sm-8 col-md-8">
+
+        <div class="col col-lg-6 col-sm-6 col-md-6 text-center" style="color: #fff;">
+            <br/>
+            <h3><p style="color: red;"><i class="fa fa-map-marker"></i></p>
+                Libya , misurata.
+            </h3>
+            <br/>
+        </div>
+
+    <div class="col col-lg-6 col-sm-6 col-md-6 text-center" style="color: #fff;">
+        <br/>
+        <h3><p style="color: darkgreen;"><i class="glyphicon glyphicon-phone"></i></p>
+        +218901234567
+        </h3>
+        <br/>
+    </div>
+            <br/>
+            <div class="col col-md-8 col-sm-8 col-lg-8" style="width: 100%; color: white">
+            <p>Designed by <strong>AHMED</strong></p>
+            <p>Copy Right 2017</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-4 col-md-4 text-center rightsocial">
+            <br/><br/>
+            <div class="btn-group-justified btn-lg groupsocial">
+                <a href="#" class="btn"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="btn"><i class="fa fa-linkedin"></i></a>
+                <a href="#" class="btn"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="btn"><i class="fa fa-inbox"></i></a>
+                <a href="#" class="btn"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="btn"><i class="fa fa-instagram"></i></a>
+            </div>
+            <br/>
+            <p style="color: aliceblue;">Flow us on social media...</p>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<div class="sideMenu">
+    <div class="btn-group btn-group-justified">
+        <a class="btn btn-facebook"><i class="fa fa-facebook"></i></a>
+        <a class="btn btn-google"><i class="fa fa-google-plus"></i></a>
+        <a class="btn btn-instagram"><i class="fa fa-instagram"></i></a>
+        <a class="btn btn-twitter"><i class="fa fa-twitter"></i></a>
+        <a class="btn btn-flickr"><i class="fa fa-flickr"></i></a>
+        <a class="btn btn-linkedin"><i class="fa fa-linkedin"></i></a>
+    </div>
+</div>
+<div class="body"></div>
+
+</body>
+</html>
