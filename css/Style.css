@@ -392,9 +392,6 @@ div:hover > .img-round.blue{
     text-shadow: 0 0 5px rgba(128, 128, 128, 1);
     
 }
-.box:hover > p{
-text-shadow: 0 0 5px rgba(128, 128, 128, 0.53);
-}
 
 
 .group {
