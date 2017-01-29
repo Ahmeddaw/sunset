@@ -390,6 +390,7 @@ div:hover > .img-round.blue{
 .box:hover{
     color: whitesmoke;
     transition: 1s;
+    text-shadow: 0 0 5px rgba(128, 128, 128, 0.53);
     
 }
 .box:hover > p{
